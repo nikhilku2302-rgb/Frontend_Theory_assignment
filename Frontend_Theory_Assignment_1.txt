@@ -1,0 +1,306 @@
+Frontend – Assignment 1
+Questions and Answers
+
+Q1. HTTP Request–Response Cycle
+
+Question:
+Explain the HTTP Request–Response Cycle with a suitable diagram. Describe the major steps involved when a client (browser) requests a resource from a web server and receives a response.
+
+Answer:
+The HTTP Request–Response Cycle describes how a client, such as a web browser, communicates with a web server to request and receive a web resource.
+
+Diagram:
+
+Client / Browser
+      |
+      | HTTP Request
+      v
+   Web Server
+      |
+      | Process Request
+      v
+Application / Database
+      |
+      | HTTP Response
+      v
+Client / Browser
+      |
+      v
+Display Web Page
+
+Major steps:
+1. Client Request – The user enters a URL or clicks a link.
+2. DNS Resolution – The domain name is converted into an IP address.
+3. HTTP Request – The browser sends an HTTP request to the web server.
+4. Server Processing – The server receives and processes the request.
+5. Application/Database Processing – If required, the server communicates with an application or database.
+6. HTTP Response – The server sends a response containing HTML, CSS, JavaScript, data, or other resources.
+7. Browser Rendering – The browser processes the response and displays the web page.
+
+Q2. Introduction to Web Technologies
+
+Question:
+Briefly explain the purpose and key features of HTML, CSS, JavaScript, Bootstrap, jQuery, and React.js.
+
+Answer:
+
+1. HTML
+HTML (HyperText Markup Language) is used to create the structure and content of a web page. It creates headings, paragraphs, links, images, tables, and forms.
+
+Example:
+<h1>Welcome</h1>
+<p>This is my website.</p>
+
+2. CSS
+CSS (Cascading Style Sheets) is used to style and design HTML elements. It controls colors, fonts, spacing, layouts, borders, backgrounds, and animations.
+
+Example:
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+3. JavaScript
+JavaScript is a programming language used to add interactivity and dynamic behavior to web pages. It handles button clicks, form validation, dynamic content, calculations, and server communication.
+
+Example:
+function showMessage() {
+    alert("Hello!");
+}
+
+4. Bootstrap
+Bootstrap is a frontend CSS framework used to create responsive and attractive websites quickly. It provides predefined CSS classes, a responsive grid system, and ready-made UI components.
+
+Example:
+<button class="btn btn-primary">Click Me</button>
+
+5. jQuery
+jQuery is a JavaScript library that simplifies DOM manipulation, event handling, AJAX, and other common JavaScript tasks.
+
+Example:
+$("#message").hide();
+
+6. React.js
+React.js is a JavaScript library for building user interfaces using reusable components. It supports component-based architecture and efficient UI updates.
+
+Example:
+function App() {
+    return <h1>Hello React</h1>;
+}
+
+Q3. Client-Side vs. Server-Side Technologies
+
+Question:
+What are client-side technologies and server-side technologies? Explain the difference between them with suitable examples.
+
+Answer:
+Client-side technologies run mainly in the user's browser. Examples include HTML, CSS, JavaScript, React.js, and Bootstrap. They are responsible mainly for presentation, user interaction, and webpage behavior.
+
+Server-side technologies run on the web server. Examples include Java, Python, PHP, Node.js, and .NET. They are used for request processing, business logic, authentication, database operations, and generating responses.
+
+Difference:
+Client-Side:
+- Runs in the browser.
+- Handles UI and interaction.
+- Examples: HTML, CSS, JavaScript.
+
+Server-Side:
+- Runs on the server.
+- Handles business logic and data processing.
+- Examples: Java, Python, PHP, Node.js.
+
+Q4. Block-Level Elements in HTML
+
+Question:
+What are block-level elements in HTML? Explain their characteristics and provide at least three examples.
+
+Answer:
+Block-level elements are HTML elements that normally start on a new line and occupy the available width of their container.
+
+Characteristics:
+1. Start on a new line.
+2. Usually occupy the full available width.
+3. Can contain other elements depending on the element.
+4. Useful for creating the structural layout of a webpage.
+
+Examples:
+<div>This is a div.</div>
+<p>This is a paragraph.</p>
+<h1>This is a heading.</h1>
+
+Other examples include <section>, <header>, <footer>, <ul>, and <ol>.
+
+Q5. Semantic HTML Elements
+
+Question:
+What are semantic elements in HTML? Explain their importance in web development and provide suitable examples.
+
+Answer:
+Semantic HTML elements clearly describe the meaning and purpose of their content.
+
+Examples:
+<header>Website Header</header>
+<nav>Navigation Links</nav>
+<main>Main Content</main>
+<section>Section Content</section>
+<article>Article Content</article>
+<footer>Website Footer</footer>
+
+Importance:
+- Make HTML easier to understand.
+- Improve code readability.
+- Help search engines understand webpage structure.
+- Improve accessibility for screen readers.
+- Make website maintenance easier.
+
+Q6. Creating a Table Using HTML
+
+Question:
+Write HTML code to create the following table:
+Sr. No. | Name | Designation | Department
+1 | John | Manager | Sales
+2 | Smith | Sr. Manager | Marketing
+3 | Jane | Manager | HR
+
+Answer:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Table</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Sr. No.</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Department</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Manager</td>
+        <td>Sales</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Smith</td>
+        <td>Sr. Manager</td>
+        <td>Marketing</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Jane</td>
+        <td>Manager</td>
+        <td>HR</td>
+    </tr>
+</table>
+</body>
+</html>
+
+Q7. Creating a Nested List Using HTML
+
+Question:
+Write HTML code to create the following list using an appropriate combination of ordered/unordered lists:
+River
+    Ganga
+    Yamuna
+    Brahmaputra
+    Narmada
+
+Answer:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested List</title>
+</head>
+<body>
+<ul>
+    <li>River
+        <ul>
+            <li>Ganga</li>
+            <li>Yamuna</li>
+            <li>Brahmaputra</li>
+            <li>Narmada</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
+
+Q8. Types of CSS
+
+Question:
+Explain the different types of CSS used for applying styles to an HTML document. Describe each type with a suitable example.
+
+Answer:
+There are three main types of CSS.
+
+1. Inline CSS
+CSS is written directly inside the HTML element using the style attribute.
+
+Example:
+<p style="color: red;">Hello World</p>
+
+2. Internal CSS
+CSS is written inside the <style> tag in the HTML document.
+
+Example:
+<style>
+    p {
+        color: blue;
+        font-size: 20px;
+    }
+</style>
+
+3. External CSS
+CSS is written in a separate .css file and linked to the HTML document.
+
+HTML:
+<link rel="stylesheet" href="style.css">
+
+style.css:
+p {
+    color: green;
+    font-size: 20px;
+}
+
+Q9. Practical Understanding
+
+Question:
+Differentiate between HTML, CSS, and JavaScript based on their role in developing a web page. Explain what each technology contributes to a website.
+
+Answer:
+HTML:
+- Role: Structure and content.
+- Examples: Headings, paragraphs, images, forms, and tables.
+
+CSS:
+- Role: Styling and presentation.
+- Examples: Colors, fonts, layouts, spacing, and backgrounds.
+
+JavaScript:
+- Role: Behavior and interactivity.
+- Examples: Button clicks, form validation, dynamic content, and calculations.
+
+Simple comparison:
+HTML = Structure
+CSS = Style
+JavaScript = Behavior
+
+Q10. Short Answer
+
+a. What is the role of Bootstrap in web development?
+
+Answer:
+Bootstrap is a frontend framework that provides ready-made CSS classes and components for creating responsive and attractive websites. It helps developers build responsive layouts and UI components such as buttons, cards, forms, and navigation bars quickly.
+
+b. What is jQuery and why was it widely used in web development?
+
+Answer:
+jQuery is a JavaScript library designed to simplify JavaScript programming. It was widely used because it made DOM manipulation, event handling, AJAX requests, and cross-browser development easier and required less code.
+
+c. What is React.js and what problem does it solve in frontend development?
+
+Answer:
+React.js is a JavaScript library used for building user interfaces using reusable components. It helps manage complex and dynamic user interfaces by breaking the UI into reusable components and making UI updates efficient.
