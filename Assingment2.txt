@@ -1,0 +1,411 @@
+Q1. What is CSS Box Model?
+
+The CSS Box Model describes how every HTML element is represented as a rectangular box.
+
+It consists of four parts:
+
+Content – The actual text, image, or other content.
+Padding – Space between the content and border.
+Border – A line surrounding the padding and content.
+Margin – Space outside the border.
+
+Example:
+
+div {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+Structure:
+
+        Margin
+    ┌───────────────┐
+    │    Border     │
+    │ ┌───────────┐ │
+    │ │  Padding  │ │
+    │ │ ┌───────┐ │ │
+    │ │ │Content│ │ │
+    │ │ └───────┘ │ │
+    │ └───────────┘ │
+    └───────────────┘
+
+
+Q2. What is Media Query? Explain with a sample code.
+
+A media query is a CSS technique used to make a webpage responsive. It allows us to apply different CSS styles depending on the screen size or device.
+
+For example, we can change the background color and font size when the screen width becomes smaller.
+
+Example:
+
+<style>
+
+    body {
+        background-color: lightblue;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            background-color: lightgreen;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+    }
+</style>
+
+Here, the styles inside @media are applied when the screen width is 600px or less.
+
+
+Q3. What are the features of Bootstrap?
+
+Bootstrap is a popular front-end framework used to create responsive and attractive websites.
+
+Main features:
+
+Responsive Design – Websites work on mobile, tablet, and desktop.
+Grid System – Provides a 12-column grid for creating layouts.
+Predefined CSS Classes – Provides ready-made classes for styling.
+Buttons – Provides different button styles.
+Forms – Provides predefined styles for forms and input fields.
+Navbar – Provides ready-made navigation bars.
+Cards – Helps create attractive content cards.
+Components – Provides ready-made components such as modals, alerts, dropdowns, and carousels.
+Easy to Use – Requires less CSS code.
+Mobile First – Designed to work well on smaller screens first.
+
+
+Q4. Write an example of basic grid structure in Bootstrap.
+
+Bootstrap uses a 12-column grid system. A webpage can be divided into rows and columns.
+
+Example:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Grid</title>
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-4">
+                Column 1
+            </div>
+
+            <div class="col-4">
+                Column 2
+            </div>
+
+            <div class="col-4">
+                Column 3
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+Explanation:
+
+Row
+ ├── Column 1 → 4 columns
+ ├── Column 2 → 4 columns
+ └── Column 3 → 4 columns
+
+Total = 4 + 4 + 4 = 12 columns
+
+container → Creates the main layout area.
+row → Creates a horizontal row.
+col-4 → Takes 4 out of 12 columns.
+
+
+Q5. What is CSS Selectors?
+
+CSS selectors are used to select HTML elements so that CSS styles can be applied to them.
+
+Types of CSS Selectors:
+1. Element Selector
+
+Selects all elements of a particular type.
+
+p {
+    color: blue;
+}
+
+This applies the style to all <p> elements.
+
+2. ID Selector
+
+Selects an element using its id.
+
+#heading {
+    color: red;
+}
+
+HTML:
+
+<h1 id="heading">Hello</h1>
+3. Class Selector
+
+Selects elements using a class.
+
+.box {
+    background-color: yellow;
+}
+
+HTML:
+
+<div class="box">Hello</div>
+4. Universal Selector
+
+Selects all HTML elements.
+
+* {
+    margin: 0;
+}
+5. Group Selector
+
+Applies the same style to multiple elements.
+
+h1, h2, p {
+    color: green;
+}
+
+
+Q6. What are CSS Backgrounds? List the properties.
+
+CSS backgrounds are used to set the background appearance of an HTML element.
+
+Main background properties:
+background-color
+background-image
+background-repeat
+background-position
+background-size
+background-attachment
+background
+Example:
+body {
+    background-color: lightblue;
+}
+
+div {
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+Explanation:
+
+background-color → Sets background color.
+background-image → Adds an image as background.
+background-repeat → Controls whether the image repeats.
+background-position → Sets the position of the background image.
+background-size → Controls the size of the image.
+background-attachment → Controls whether the background scrolls.
+background → Shorthand property for background settings.
+
+
+
+Q7. How can we overlap elements in CSS?
+
+Elements can be overlapped using CSS positioning and the z-index property.
+
+position: absolute can be used to place one element over another.
+
+Example:
+<div class="box1"></div>
+<div class="box2"></div>
+.box1 {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.box2 {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+
+The two boxes will overlap because they are positioned using absolute.
+
+Using z-index
+.box1 {
+    z-index: 1;
+}
+
+.box2 {
+    z-index: 2;
+}
+
+The element with the higher z-index appears in front.
+
+
+
+Q8. What are the different positioning properties in CSS?
+
+CSS provides different position values to control the placement of elements.
+
+1. Static
+
+This is the default position.
+
+div {
+    position: static;
+}
+
+The element follows the normal flow of the webpage.
+
+2. Relative
+
+The element is positioned relative to its normal position.
+
+div {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+3. Absolute
+
+The element is positioned relative to its nearest positioned ancestor.
+
+div {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+4. Fixed
+
+The element stays fixed in the same position even when the page is scrolled.
+
+div {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+5. Sticky
+
+The element behaves like a relatively positioned element until a specified scrolling position is reached, then it sticks.
+
+div {
+    position: sticky;
+    top: 0;
+}
+
+Summary:
+
+Position	Meaning
+static	Default position
+relative	Relative to its normal position
+absolute	Positioned relative to a positioned ancestor
+fixed	Fixed relative to the viewport
+sticky	Sticks during scrolling
+
+
+Q9. What is ECMAScript?
+
+ECMAScript is a standard/specification that defines how scripting languages should work. JavaScript is the most widely used implementation of ECMAScript.
+
+ECMAScript defines features such as:
+
+Variables
+Functions
+Objects
+Classes
+Operators
+Loops
+Arrays
+Modules
+Promises
+Modern JavaScript features
+Example:
+let name = "Nikhil";
+
+console.log(name);
+
+JavaScript follows the ECMAScript standard.
+
+New versions of ECMAScript are released with new features. For example, ES6 (ECMAScript 2015) introduced features such as let, const, arrow functions, classes, and template literals.
+
+
+
+Q10. Difference between var, let and const. Explain Temporal Dead Zone.
+
+var, let, and const are used to declare variables in JavaScript, but they have different behavior.
+
+Difference:
+Feature	var	let	const
+Scope	Function	Block	Block
+Can be redeclared?	Yes	No	No
+Can be reassigned?	Yes	Yes	No
+Hoisted?	Yes	Yes	Yes
+TDZ	No	Yes	Yes
+var
+var age = 20;
+age = 21;
+
+console.log(age);
+
+var can be reassigned and redeclared within its scope.
+
+let
+let age = 20;
+age = 21;
+
+console.log(age);
+
+let can be reassigned but cannot be redeclared in the same block.
+
+Example:
+
+let x = 10;
+x = 20;       // Allowed
+const
+const pi = 3.14;
+console.log(pi);
+
+A const variable cannot be reassigned.
+
+const x = 10;
+x = 20;       // Error
+Temporal Dead Zone (TDZ)
+
+The Temporal Dead Zone is the period between entering a block and the point where a let or const variable is initialized.
+
+Example:
+
+console.log(x);
+
+let x = 10;
+
+This produces an error because x is in the Temporal Dead Zone until the declaration is reached.
+
+Another example:
+
+{
+    // TDZ starts
+
+    console.log(name);   // Error
+
+    let name = "Nikhil"; // TDZ ends
+}
